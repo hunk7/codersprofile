@@ -4,7 +4,7 @@
  github.com/hunk7  
          
 Day 1 : React Setup | npm i react-chart.js , pixi.js , three.js         
-Day 2 :         
+Day 2 : Server Setup | Connected Mongodb | npm i Express , nodemon , mongoose | Postman               
 Day 3 :         
 Day 4 :         
 
