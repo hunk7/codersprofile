@@ -1,3 +1,13 @@
+# CodersProfile   
+ Author : Ganesh Bhadra     
+ License : MIT        
+ github.com/hunk7  
+         
+Day 1 : React Setup | npm i react-chart.js , pixi.js , three.js         
+Day 2 :         
+Day 3 :         
+Day 4 :         
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
