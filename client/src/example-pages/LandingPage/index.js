@@ -112,12 +112,12 @@ const LandingPage = () => {
                       <div>
                         <Button
                           tag={Link}
-                          to="/DashboardDefault"
+                          to="/Profile"
                           size="lg"
                           color="success"
                           className="d-block d-sm-inline-block"
                           title="View Bamburgh React Admin Dashboard with Reactstrap Free Live Preview">
-                          <span className="btn-wrapper--label">Pro Dashboard</span>
+                          <span className="btn-wrapper--label">Profile</span>
                           <span className="btn-wrapper--icon">
                             <FontAwesomeIcon icon={['fas', 'arrow-right']} />
                           </span>

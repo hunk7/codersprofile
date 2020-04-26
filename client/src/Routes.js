@@ -8,6 +8,8 @@ import { Spinner } from 'reactstrap';
 import { PresentationLayout } from './layout-blueprints';
 
 const LandingPage = lazy(() => import('./example-pages/LandingPage'));
+const Profile = lazy(() => import('./example-pages/Profile'));
+const Achievements = lazy(() => import('./example-pages/Achievements'));
 
 const Routes = () => {
   const location = useLocation();
@@ -59,8 +61,8 @@ const Routes = () => {
               </Switch>
             </PresentationLayout>
           </Route>
-
-          
+          <Route path="/Profile" component={Profile} />
+          <Route path="/Achievements" component={Achievements} /> 
         </Switch>
       </Suspense>
     </AnimatePresence>

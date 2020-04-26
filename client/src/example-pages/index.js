@@ -1,1 +1,11 @@
+export { default as Achievements } from './Achievements';
+export { default as Application } from './Application';
+export { default as Chat } from './Chat';
+export { default as Creator } from './Creator';
+export { default as Feed } from './Feed';
 export { default as LandingPage } from './LandingPage';
+export { default as Language-Pages } from './Language-Pages';
+export { default as Opensource-C } from './Opensource-C';
+export { default as Profile } from './Profile';
+export { default as Projector } from './Projector';
+export { default as Setting } from './Setting';
