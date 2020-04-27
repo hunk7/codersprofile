@@ -1,18 +1,50 @@
 import React, { Fragment } from 'react';
 import ReactTypingEffect from 'react-typing-effect';
-import Bread from './Bread';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
+import { Button } from 'reactstrap';
 
 const Aboutme = () =>  {
 		return (
-			<Fragment>
-			
-				<div id="fh5co-about" className="animate-box">
+			<Fragment>		
+				<div id="fh5co-about" className="animate-box">		             
 		            <div className="container">
 		              <div className="row">
 		                <div className="col-md-12 col-md-offset-0 text-center fh5co-heading">
 		                  <h2>About Me</h2>
 		                </div>
 		              </div>
+		              <div className="row">
+		                <div className="col-md-3">
+		                  <ul className="info">
+		                    <li><span className="first-block">Posts:</span><span className="second-block">45</span></li>
+		                  </ul>
+		                </div>
+		                <div className="col-md-4">
+		                  <ul className="info">
+		                    <li><span className="first-block">Followers:</span><span className="second-block">234</span></li>
+		                  </ul>
+		                </div>
+		                <div className="col-md-4">
+		                  <ul className="info">
+		                    <li><span className="first-block">Following:</span><span className="second-block">523</span></li>
+		                  </ul>
+		                </div>
+		                <div className="col-md-1">
+		                  <Button
+                          tag={Link}
+                          to="/CreatePost"
+                          size="sm"
+                          color="first"
+                          className="btn bg-secondary border-dark text-black-50 p-3">
+                          <span className="btn-wrapper--label"></span>
+                          <span className="btn-wrapper--icon">
+                            <FontAwesomeIcon icon={['fas', 'arrow-right']} />
+                          </span>
+                        </Button>
+		                </div>
+		              </div>
+		              <br />
 		              <div className="row">
 		                <div className="col-md-4">
 		                  <ul className="info">

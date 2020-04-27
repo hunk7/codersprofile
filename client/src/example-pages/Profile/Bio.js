@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import ReactTypingEffect from 'react-typing-effect';
 
 const Bio = () =>  {
 		return (

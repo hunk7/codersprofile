@@ -13,9 +13,9 @@ Day 4 : API createpost | new Schema post | JWT_TOKEN validation | Postman POST t
 
 Day 5 : Deleted Base Client | Rebuild Reactstrap App | npm i react-typing-effect | Reused Reactstrap App's Sass & Node_modules | Home page | Sign Up | SignIn              
 
-Day 6 : Profile Page Components | Achievements Components | CSS Import Through assests        
+Day 6 : Profile Page Components | Achievements Components | CSS Import Through assests | Breadcrumbs | Span Elements word wrap | Set Routes Profile , Achievements       
 
-Day 7 :             
+Day 7 : Deleted Components , Components Layout , Sass , Reducers | Redesigned Home Page | Projector | Feed | Create Post | follow | Footer                 
 
 Day 8 :         
 

@@ -19,7 +19,7 @@ const Bread = (props) => {
                 <BreadcrumbItem tag={Link} to="/OpensourceC">OpensourceC</BreadcrumbItem>
                 <BreadcrumbItem tag={Link} to="/Projector">Projector</BreadcrumbItem>
                 <BreadcrumbItem tag={Link} to="/Setting">Setting</BreadcrumbItem>
-                <BreadcrumbItem tag={Link} to="/Signout">SignOut</BreadcrumbItem>
+                <BreadcrumbItem tag={Link} to="/LandingPage">SignOut</BreadcrumbItem>
             </Breadcrumb>
           </div>
         </div>

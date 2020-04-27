@@ -1,3 +1,7 @@
+import React, { Fragment } from 'react';
+import {PrismCode} from "./PrismCode"
+
+const code = `
 import React,  { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -8,8 +12,6 @@ import Bread from '../Profile/Bread';
 import ProjectAbout from './ProjectAbout';
 import ProjectImages from './ProjectImages';
 import Demo from './Demo';
-import DemoContainer from './DemoContainer';
-import SegmentExplanation from './SegmentExplanation';
 
 import '../../assets/Profile/css/style.css';
 import '../../assets/Profile/css/animate.css';
@@ -22,8 +24,7 @@ const Projector = () => {
           <Bread />
           <ProjectAbout />
           <ProjectImages />
-          <DemoContainer />
-          <SegmentExplanation />
+          <Demo />
           <Hire />
           <Footer />
         </div>
@@ -32,3 +33,18 @@ const Projector = () => {
 };
 
 export default Projector;
+`
+
+const Demo = () =>  {
+		return (
+			<Fragment>
+				 <PrismCode
+				    code={code}
+				    language="js"
+				    plugins={["line-numbers"]}
+				  />
+			</Fragment>
+		);
+}
+
+export default Demo

@@ -10,6 +10,9 @@ import { PresentationLayout } from './layout-blueprints';
 const LandingPage = lazy(() => import('./example-pages/LandingPage'));
 const Profile = lazy(() => import('./example-pages/Profile'));
 const Achievements = lazy(() => import('./example-pages/Achievements'));
+const Projector = lazy(() => import('./example-pages/Projector'));
+const Feed = lazy(() => import('./example-pages/Feed'));
+const CreatePost = lazy(() => import('./example-pages/CreatePost'));
 
 const Routes = () => {
   const location = useLocation();
@@ -63,6 +66,9 @@ const Routes = () => {
           </Route>
           <Route path="/Profile" component={Profile} />
           <Route path="/Achievements" component={Achievements} /> 
+          <Route path="/Projector" component={Projector} /> 
+          <Route path="/Feed" component={Feed} />
+          <Route path="/CreatePost" component={CreatePost} />
         </Switch>
       </Suspense>
     </AnimatePresence>

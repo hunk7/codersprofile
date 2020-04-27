@@ -3,11 +3,9 @@ import { Row, Col } from 'reactstrap';
 import ReactTypingEffect from 'react-typing-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
+import '../../assets/Profile/css/animate.css'
+import '../../assets/Profile/css/style.css'
 
-import hero9 from '../../assets/images/hero-bg/hero-4.jpg';
-import stock1 from '../../assets/images/stock-photos/stock-1.jpg';
-import stock2 from '../../assets/images/stock-photos/stock-2.jpg';
-import stock3 from '../../assets/images/stock-photos/stock-3.jpg';
 import { Spinner,
   Card,
   InputGroupText,
@@ -27,12 +25,8 @@ const LandingPage = () => {
 
   return (
     <Fragment>
-      <div className="hero-wrapper bg-composed-wrapper bg-midnight-bloom min-vh-100">
+      <div className="hero-wrapper bg-composed-wrapper min-vh-100">
         <div className="flex-grow-1 w-100 d-flex align-items-center">
-          <div
-            className="bg-composed-wrapper--image opacity-6"
-            style={{ backgroundImage: 'url(' + hero9 + ')' }}
-          />
           <div className="bg-composed-wrapper--bg opacity-2" />
           <div className="bg-composed-wrapper--content pt-5 pb-2 py-lg-5">
             <div className="container pb-5">
@@ -42,7 +36,7 @@ const LandingPage = () => {
                     <Badge
                       pill
                       color="info"
-                      className="px-4 text-uppercase h-auto py-1"
+                      className="px-4 text-uppercase bg-secondary text-black-50 h-auto py-1"
                       id="ProjVersion123">
                       Version
                     </Badge>
@@ -51,99 +45,51 @@ const LandingPage = () => {
                       target="ProjVersion123">
                       Version: 1.1.0
                     </UncontrolledTooltip>
-                    <div className="px-4 px-sm-0 text-white mt-4">
-                      <ReactTypingEffect className="display-2 mb-5 font-size-xl" style={{fontFamily: "Microsoft Himalaya"}}
+                    <div className="px-4 px-sm-0 text-black-100 mt-4">
+                      <ReactTypingEffect className="display-2 mb-5 font-size-xl"
                         text="Codersprofile!"
                       />
-                      <p className="font-size-xl text-white-50 mb-3">
+                      <p className="font-size-xl text-black-100 mb-3">
                         This admin template is the perfect lite solution for
                         building React powered applications !!!
                       </p>
                       <div className="divider border-2 border-light my-5 border-light opacity-2 mx-auto rounded-circle w-50" />
-                        <Row>
-                          <Col xl="4" lg="6">
-                            <Card className="card-transparent mb-5">
-                              <div className="card-img-wrapper">
-                                <img src={stock1} className="card-img-top rounded" alt="..." />
-                              </div>
-                              <div className="card-body text-center">
-                                <p className="card-text">
-                                  Some quick example text to build on the card title and make up
-                                  the bulk of the card's content.</p>
-                                  <Button size="sm" outline color="first" className="btn-pill mt-1">
-                                  View Details
-                                </Button>
-                              </div>
-                            </Card>
-                          </Col>
-                          <Col xl="4" lg="6">
-                            <Card className="card-transparent mb-5">
-                              <div className="card-img-wrapper">
-                                <img src={stock2} className="card-img-top rounded" alt="..." />
-                              </div>
-                              <div className="card-body text-center">
-                                <p className="card-text">
-                                  Some quick example text to build on the card title and make up
-                                  the bulk of the card's content.
-                                </p>
-                                <Button size="sm" outline color="first" className="btn-pill mt-1">
-                                  View Details
-                                </Button>
-                              </div>
-                            </Card>
-                          </Col>
-                          <Col xl="4" lg="12">
-                            <Card className="card-transparent mb-5">
-                              <div className="card-img-wrapper">
-                                <img src={stock3} className="card-img-top rounded" alt="..." />
-                              </div>
-                              <div className="card-body text-center">
-                                <p className="card-text">
-                                  Some quick example text to build on the card title and make up
-                                  the bulk of the card's content.
-                                </p>
-                                <Button size="sm" outline color="first" className="btn-pill mt-1">
-                                  View Details
-                                </Button>
-                              </div>
-                            </Card>
-                          </Col>
-                        </Row>
+                      
                       <div>
                         <Button
                           tag={Link}
                           to="/Profile"
                           size="lg"
-                          color="success"
-                          className="d-block d-sm-inline-block"
+                          color="first"
+                          className="btn bg-secondary border-dark text-black-50 p-3"
                           title="View Bamburgh React Admin Dashboard with Reactstrap Free Live Preview">
-                          <span className="btn-wrapper--label">Profile</span>
+                          <span className="btn-wrapper--label p-1">Profile</span>
                           <span className="btn-wrapper--icon">
                             <FontAwesomeIcon icon={['fas', 'arrow-right']} />
                           </span>
                         </Button> 
-                        <Button color="primary" size="lg" className="m-2" onClick={toggle5}>
+                        <Button color="first" size="lg" className="btn bg-secondary border-dark text-black-50" onClick={toggle5}>
                           <span className="btn-wrapper--icon">
                             <FontAwesomeIcon
                               icon={['fas', 'user']}
                             />
                           </span>
-                          <span className="btn-wrapper--label">
+                          <span className="btn-wrapper--label p-1">
                             SIGN IN
                           </span>
                         </Button>
-                        <Button color="first" size="lg" className="m-2" onClick={toggle4}>
+                        <Button color="first" size="lg" className="btn bg-secondary border-dark text-black-50" onClick={toggle4}>
                           <span className="btn-wrapper--icon">
                             <FontAwesomeIcon
                               icon={['fas', 'external-link-alt']}
                             />
                           </span>
-                          <span className="btn-wrapper--label">
+                          <span className="btn-wrapper--label p-1">
                             SIGN UP
                           </span>
                         </Button>          
                       </div>
-                      <small className="d-block pt-4">
+                      <small className="d-block pt-4 text-black-100">
                         For a comprehensive list of components &amp; commercial
                         licenses, we recommend the PRO version.
                       </small>
@@ -167,13 +113,13 @@ const LandingPage = () => {
                   <span className="btn-wrapper--icon">
                     <FontAwesomeIcon icon={['fab', 'github']} />
                   </span>
-                  <span className="btn-wrapper--label">github</span>
+                  <span className="btn-wrapper--label p-1">github</span>
                 </Button>
                 <Button color="google" className="ml-2">
                   <span className="btn-wrapper--icon">
                     <FontAwesomeIcon icon={['fab', 'google']} />
                   </span>
-                  <span className="btn-wrapper--label">google</span>
+                  <span className="btn-wrapper--label p-1">google</span>
                 </Button>
               </div>
             </div>
@@ -235,13 +181,13 @@ const LandingPage = () => {
                   <span className="btn-wrapper--icon">
                     <FontAwesomeIcon icon={['fab', 'github']} />
                   </span>
-                  <span className="btn-wrapper--label">github</span>
+                  <span className="btn-wrapper--label p-1">github</span>
                 </Button>
                 <Button color="google" className="ml-2">
                   <span className="btn-wrapper--icon">
                     <FontAwesomeIcon icon={['fab', 'google']} />
                   </span>
-                  <span className="btn-wrapper--label">google</span>
+                  <span className="btn-wrapper--label p-1">google</span>
                 </Button>
               </div>
             </div>
