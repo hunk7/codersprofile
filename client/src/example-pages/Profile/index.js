@@ -36,7 +36,6 @@ const Profile = () => {
                           <h1><span>Ganesh Bhadra</span></h1>
                           <h3><span>Web Developer | Photographer</span></h3>
                           <br />
-                          <p>
                             <ul className="fh5co-social-icons">
                               <li><a href="#"><span className="btn-wrapper--icon">
                     <FontAwesomeIcon icon={['fab', 'github']} />
@@ -51,7 +50,6 @@ const Profile = () => {
                     <FontAwesomeIcon icon={['fab', 'twitter']} />
                   </span></a></li>
                             </ul>
-                          </p>
                         </div>
                       </div>
                     </div>

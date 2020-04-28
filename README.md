@@ -15,8 +15,12 @@ Day 5 : Deleted Base Client | Rebuild Reactstrap App | npm i react-typing-effect
 
 Day 6 : Profile Page Components | Achievements Components | CSS Import Through assests | Breadcrumbs | Span Elements word wrap | Set Routes Profile , Achievements       
 
-Day 7 : Deleted Components , Components Layout , Sass , Reducers | Redesigned Home Page | Projector | Feed | Create Post | follow | Footer                 
+Day 7 : Deleted Components , Components Layout , Sass , Reducers | Redesigned Home Page , Signup , Signin | Footer | Changed Button CSS | npm i Prismjs | Prismjs Skeleton Code | Prismjs CSS Import | follow | Projector Components | Feed | Create Post | Set Routes Projector , Feed , Create Post                       
 
-Day 8 :         
+Day 8 : Input Markup correction | useHistory usage for Path | Form useState and event Listening | Form Validation | Form Submition and Testing | npm i materialize-css | Copied materialize-css toast styles | cloudinary account setup and API | Sign In Form Completion          
+
+Day 9 :       
+
+Day 10 :       
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

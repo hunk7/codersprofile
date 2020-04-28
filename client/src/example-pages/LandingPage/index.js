@@ -1,12 +1,13 @@
 import React,  { Fragment, useState } from 'react';
 import { Row, Col } from 'reactstrap';
 import ReactTypingEffect from 'react-typing-effect';
+import M from 'materialize-css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import { Link , useHistory } from 'react-router-dom';
 import '../../assets/Profile/css/animate.css'
 import '../../assets/Profile/css/style.css'
 
-import { Spinner,
+import { 
   Card,
   InputGroupText,
   FormGroup,
@@ -16,12 +17,75 @@ import { Spinner,
   ModalBody,
   ModalFooter, Button, UncontrolledTooltip, Badge } from 'reactstrap';
 
-const LandingPage = () => {
+const LandingPage = (props) => {
+
+  const history = useHistory();
+  const [name,setName] = useState("");
+  const [email,setEmail] = useState("");
+  const [password,setPassword] = useState("");
 
   const [modal4, setModal4] = useState(false);
   const toggle4 = () => setModal4(!modal4);
   const [modal5, setModal5] = useState(false);
   const toggle5 = () => setModal5(!modal5);
+
+  const PostData = (props) => {
+    if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) {
+        M.toast({html: "Invalid Email Address"})
+        return
+    }
+    fetch("/signup",
+    {
+      method:"Post",
+      headers:{
+        'Content-Type':'application/json'
+    },
+    body:JSON.stringify({
+        name,
+        email,
+        password
+      }) 
+  }).then(res => res.json())
+      .then(data => {
+        if (data.error) {
+          console.log(data.error)
+          M.toast({html: data.error})
+        } else {
+          console.log(data.message)
+          M.toast({html: data.message})
+        }
+      }).catch(err => {
+        console.log(err)
+      })
+} 
+
+    const GetData = (props) => {
+    if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) {
+        M.toast({html: "Invalid Email Address"})
+        return
+    }
+    fetch("/signin",
+    {
+      method:"Post",
+      headers:{
+        'Content-Type':'application/json'
+    },
+    body:JSON.stringify({
+        email,
+        password
+      }) 
+  }).then(res => res.json())
+      .then(data => {
+        if (data.error) {
+          console.log(data.error)
+          M.toast({html: data.error})
+        } else {
+          history.push('/Feed');
+        }
+      }).catch(err => {
+        console.log(err)
+      })
+} 
 
   return (
     <Fragment>
@@ -29,7 +93,7 @@ const LandingPage = () => {
         <div className="flex-grow-1 w-100 d-flex align-items-center">
           <div className="bg-composed-wrapper--bg opacity-2" />
           <div className="bg-composed-wrapper--content pt-5 pb-2 py-lg-5">
-            <div className="container pb-5">
+            <div className="container pb-5">    
               <Row>
                 <Col lg="10" className="px-0 mx-auto d-flex align-items-center">
                   <div className="text-center">
@@ -101,6 +165,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
       <Modal zIndex={2000} centered isOpen={modal4} toggle={toggle4}>
         <div>
           <Card className="bg-secondary shadow-none border-0">
@@ -125,7 +190,7 @@ const LandingPage = () => {
             </div>
             <div className="card-body px-lg-5 py-lg-5">
               <div className="text-center text-muted mb-4">
-                <small>Or sign in with credentials</small>
+                <small>Or sign up with credentials</small>
               </div>
               <form>
                 <FormGroup>
@@ -135,7 +200,7 @@ const LandingPage = () => {
                         <FontAwesomeIcon icon={['fas', 'user']} />
                       </InputGroupText>
                     </div>
-                    <Input placeholder="Name" type="text" />
+                    <Input placeholder="Name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
                   </div>
                 </FormGroup>
                 <div className="form-group mb-3">
@@ -145,7 +210,7 @@ const LandingPage = () => {
                         <FontAwesomeIcon icon={['far', 'envelope']} />
                       </InputGroupText>
                     </div>
-                    <Input placeholder="Email" type="email" />
+                    <Input placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                   </div>
                 </div>
                 <FormGroup>
@@ -155,13 +220,13 @@ const LandingPage = () => {
                         <FontAwesomeIcon icon={['fas', 'unlock-alt']} />
                       </InputGroupText>
                     </div>
-                    <Input placeholder="Password" type="password" />
+                    <Input placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                   </div>
                 </FormGroup>
                 
                 <div className="text-center">
-                  <Button color="second" className="mt-4">
-                    Sign in
+                  <Button color="second" className="mt-4" onClick={() => PostData()}>
+                    Sign up
                   </Button>
                 </div>
               </form>
@@ -195,6 +260,7 @@ const LandingPage = () => {
               <div className="text-center text-muted mb-4">
                 <small>Or sign in with credentials</small>
               </div>
+
               <form>
                 <div className="form-group mb-3">
                   <div className="input-group input-group-alternative">
@@ -203,7 +269,7 @@ const LandingPage = () => {
                         <FontAwesomeIcon icon={['far', 'envelope']} />
                       </InputGroupText>
                     </div>
-                    <Input placeholder="Email" type="email" />
+                    <Input placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                   </div>
                 </div>
                 <FormGroup>
@@ -213,7 +279,7 @@ const LandingPage = () => {
                         <FontAwesomeIcon icon={['fas', 'unlock-alt']} />
                       </InputGroupText>
                     </div>
-                    <Input placeholder="Password" type="password" />
+                    <Input placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                   </div>
                 </FormGroup>
                 <div className="custom-control custom-control-alternative custom-checkbox">
@@ -229,7 +295,7 @@ const LandingPage = () => {
                   </label>
                 </div>
                 <div className="text-center">
-                  <Button color="second" className="mt-4">
+                  <Button color="second" className="mt-4" onClick={() => GetData()}>
                     Sign in
                   </Button>
                 </div>

@@ -34,9 +34,7 @@ const DemoContainer = () =>  {
 		                  <h2><ReactTypingEffect
 		                        text="Code Description!"
 		                      /></h2>
-		                  <p>
-							<Demo />
-		                  </p>
+		                  <Demo />
 		                    <ul className="fh5co-social-icons">
 		                      <li><a href="#"><span className="btn-wrapper--icon">
 			                    <FontAwesomeIcon icon={['fab', 'github']} />
@@ -45,7 +43,6 @@ const DemoContainer = () =>  {
 			                  <li><a href="#"><FontAwesomeIcon icon="link" /></a></li>
 			                  <li><a href="#"><FontAwesomeIcon icon="arrow-alt-circle-down" /></a></li>
 		                    </ul>
-		                  
 		                </div>
 		              </div>
 		            </div>

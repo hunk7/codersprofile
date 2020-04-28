@@ -55,16 +55,14 @@ const Feed = () =>  {
 		                  </ul>
 		                </div>
 		                <div className="col-md-8">
-		                  <p>There live the blind texts far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in bookmarksgrove there live the blind texts far from the countries.</p>
-		                  <p>Far far away, behind the word mountains, Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci there live the blind texts from the countries Vokalia and Consonantia, there live the blind texts. Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
-		                  <p>
+		                  <p>e countries.</p>
+		                  <p>itaque adipisci.</p>
 		                    <ul className="fh5co-social-icons">
 		                      <li><a href="#"><i className="icon-twitter2"></i></a></li>
 		                      <li><a href="#"><i className="icon-facebook3"></i></a></li>
 		                      <li><a href="#"><i className="icon-linkedin2"></i></a></li>
 		                      <li><a href="#"><i className="icon-dribbble2"></i></a></li>
 		                    </ul>
-		                  </p>
 		                </div>
 		              </div>
 		            </div>
