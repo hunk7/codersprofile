@@ -17,9 +17,9 @@ Day 6 : Profile Page Components | Achievements Components | CSS Import Through a
 
 Day 7 : Deleted Components , Components Layout , Sass , Reducers | Redesigned Home Page , Signup , Signin | Footer | Changed Button CSS | npm i Prismjs | Prismjs Skeleton Code | Prismjs CSS Import | follow | Projector Components | Feed | Create Post | Set Routes Projector , Feed , Create Post                       
 
-Day 8 : Input Markup correction | useHistory usage for Path | Form useState and event Listening | Form Validation | Form Submition and Testing | npm i materialize-css | Copied materialize-css toast styles | cloudinary account setup and API | Sign In Form Completion          
+Day 8 : Input Markup correction | useHistory usage for Path | Form useState and event Listening | Form Validation | proxy added in package.json | Form Submition and Testing | npm i materialize-css | Copied materialize-css toast styles | cloudinary account setup and API | Sign In Form Completion          
 
-Day 9 :       
+Day 9 : Sign up Form Completion | Toast Messages | Create Post Handeling and Testing | Create Form Completion | localStroge of Token Value and User Details | Retrieving URL from cloudinary API | Token Validation and Authentication Through Middleware | push Schema 'Post' on mongodb Through Create Post Route        
 
 Day 10 :       
 

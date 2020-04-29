@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Fragement,Component,createContext } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import configureStore from './config/configureStore';
 import { Provider } from 'react-redux';
@@ -260,7 +260,7 @@ class App extends Component {
       <Provider store={store}>
         <BrowserRouter basename="/Codersprofile/">
           <ScrollToTop>
-            <Routes />
+                 <Routes />
           </ScrollToTop>
         </BrowserRouter>
       </Provider>

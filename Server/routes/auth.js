@@ -36,7 +36,7 @@ router.post('/signup',(req,res) => {   // API or route '/signup'
 			})
 
 			user.save().then(user => {
-				res.json({message: "Saved Successfully"})
+				res.json({message: "Account Created Successfully"})
 			})
 			.catch(err => {
 				console.log(err);

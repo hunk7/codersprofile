@@ -1,10 +1,11 @@
 import React, { lazy, Suspense } from 'react';
-import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
+import { useReducer,useContext } from 'react';
+import { Route,Switch,Redirect, useLocation } from 'react-router-dom';
+import {reducer,initialState} from './reducers/userReducer'
 import { AnimatePresence, motion } from 'framer-motion';
 import { Spinner } from 'reactstrap';
 
 // Layout Blueprints
-
 import { PresentationLayout } from './layout-blueprints';
 
 const LandingPage = lazy(() => import('./example-pages/LandingPage'));
@@ -15,7 +16,6 @@ const Feed = lazy(() => import('./example-pages/Feed'));
 const CreatePost = lazy(() => import('./example-pages/CreatePost'));
 
 const Routes = () => {
-  const location = useLocation();
 
   const pageVariants = {
     initial: {
@@ -38,6 +38,8 @@ const Routes = () => {
     duration: 0.4
   };
 
+  const location = useLocation();
+  
   return (
     <AnimatePresence>
       <Suspense

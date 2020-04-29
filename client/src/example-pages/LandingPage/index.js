@@ -48,10 +48,8 @@ const LandingPage = (props) => {
   }).then(res => res.json())
       .then(data => {
         if (data.error) {
-          console.log(data.error)
           M.toast({html: data.error})
         } else {
-          console.log(data.message)
           M.toast({html: data.message})
         }
       }).catch(err => {
@@ -68,7 +66,7 @@ const LandingPage = (props) => {
     {
       method:"Post",
       headers:{
-        'Content-Type':'application/json'
+        "Content-Type":"application/json"
     },
     body:JSON.stringify({
         email,
@@ -80,6 +78,10 @@ const LandingPage = (props) => {
           console.log(data.error)
           M.toast({html: data.error})
         } else {
+
+          localStorage.setItem("jwt",data.token)
+          localStorage.setItem("user",JSON.stringify(data.user))
+          M.toast({html:'Loged In Successfully'})
           history.push('/Feed');
         }
       }).catch(err => {
