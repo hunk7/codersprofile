@@ -74,21 +74,21 @@ return (
                   <div className="row form-group justify-content-center">
                     <div className="col-md-6 text-center">
                       <input type="text" id="title" className="form-control text-center" placeholder="Title"
-						value={title} onChange={(e) => setTitle(e.target.value)}
+						          required="required" value={title} onChange={(e) => setTitle(e.target.value)}
                        />
                     </div>
                   </div>
                   <div className="row form-group justify-content-center">
                     <div className="col-md-6">
                       <input type="text" id="body" className="form-control text-center" placeholder="Description" 
-                      	value={body} onChange={(e) => setBody(e.target.value)}
+                      	required value={body} onChange={(e) => setBody(e.target.value)}
                       />
                     </div>
                   </div>
 
                   <div className="row form-group justify-content-center">
                     <div className="col-md-6">
-                      <input type="file" onChange={(e) => setImage(e.target.files[0])}
+                      <input type="file" required="required" onChange={(e) => setImage(e.target.files[0])}
                        />
                     </div>
                   </div>

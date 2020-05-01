@@ -10,6 +10,7 @@ import ProjectImages from './ProjectImages';
 import Demo from './Demo';
 import DemoContainer from './DemoContainer';
 import SegmentExplanation from './SegmentExplanation';
+import Links from './Links';
 
 import '../../assets/Profile/css/style.css';
 import '../../assets/Profile/css/animate.css';
@@ -20,6 +21,7 @@ const Projector = () => {
     <Fragment>
         <div id="page"> 
           <Bread />
+          <Links />
           <ProjectAbout />
           <ProjectImages />
           <DemoContainer />

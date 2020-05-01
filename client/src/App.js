@@ -5,7 +5,8 @@ import { Provider } from 'react-redux';
 import Routes from './Routes';
 import ScrollToTop from './utils/ScrollToTop';
 import './assets/base.scss';
-
+import './react-date-range/dist/styles.css'; // main css file
+import './react-date-range/dist/theme/default.css'; // theme css file
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   fab,

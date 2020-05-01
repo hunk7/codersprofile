@@ -14,6 +14,9 @@ const Achievements = lazy(() => import('./example-pages/Achievements'));
 const Projector = lazy(() => import('./example-pages/Projector'));
 const Feed = lazy(() => import('./example-pages/Feed'));
 const CreatePost = lazy(() => import('./example-pages/CreatePost'));
+const OpensourceC = lazy(() => import('./example-pages/Opensource-C'));
+const Dashboard = lazy(() => import('./example-pages/Dashboard'));
+const DetailsHondaCivic = lazy(() => import('./example-pages/Details/DetailsHondaCivic'));
 
 const Routes = () => {
 
@@ -71,6 +74,9 @@ const Routes = () => {
           <Route path="/Projector" component={Projector} /> 
           <Route path="/Feed" component={Feed} />
           <Route path="/CreatePost" component={CreatePost} />
+          <Route path="/OpensourceC" component={OpensourceC} />
+          <Route path="/Dashboard" component={Dashboard} />
+          <Route path="/DetailsHondaCivic" component={DetailsHondaCivic} />
         </Switch>
       </Suspense>
     </AnimatePresence>
